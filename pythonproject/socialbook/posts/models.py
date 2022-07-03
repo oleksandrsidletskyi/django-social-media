@@ -49,7 +49,7 @@ class Like(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user}-{self.posts}-{self.value}"
+        return f"{self.user}-{self.post}-{self.value}"
 
 
 
