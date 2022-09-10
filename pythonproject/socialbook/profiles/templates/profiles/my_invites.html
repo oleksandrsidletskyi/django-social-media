@@ -13,12 +13,12 @@ My invites
             <div class="ui grid">
                 <div class="row">
                     <div class="three wide column">
-                        <img class="ui small circular image" src="obj.avatar.url">
+                        <img class="ui small circular image" src={{obj.avatar.url}}>
                     </div>
                     <div class="thirteen wide column">
                         <h3>{{obj.user}}</h3>
                         <p>{{obj.bio}}</p>
-                        <a href=""><button class="ui primary button w-big mb-5">See profile</button></a>
+                        <a href={{obj.get_absolute_url}}><button class="ui primary button w-big mb-5">See profile</button></a>
                         <form action="{% url 'profiles:accept-invite' %}" method="POST">
                             {%csrf_token%}
                             <input type="hidden" name="profile_pk" value={{obj.pk}}>
